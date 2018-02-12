@@ -1,0 +1,4 @@
+[submodule "dynamix"]
+	path = dynamix
+	url = https://github.com/iboB/dynamix.git
+	branch = dev
