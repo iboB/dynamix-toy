@@ -9,6 +9,8 @@
 
 #include "ID.h"
 
+#include "dynamixc.h"
+
 class GameObject : public dynamix::object
 {
 public:

@@ -7,5 +7,7 @@
 //
 #pragma once
 
+#include <cstdint>
+
 using ID = int32_t;
 constexpr ID Invalid_ID = ID(-1);

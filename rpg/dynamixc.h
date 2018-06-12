@@ -5,9 +5,7 @@
 // See accompanying file LICENSE.txt or copy at
 // https://opensource.org/licenses/MIT
 //
-#if defined(_MSC_VER)
-#   pragma once
-#endif
+#pragma once
 
 #include <dynamix/dynamix.hpp>
 #include <dynamix/gen/short_message_macros.hpp>

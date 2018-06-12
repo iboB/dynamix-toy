@@ -11,13 +11,6 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 project(dynamix-toy)
 
-set(CMAKE_MODULE_PATH
-    ${CMAKE_MODULE_PATH}
-    ${CMAKE_CURRENT_SOURCE_DIR}/cmake
-)
-
-include(precompiled_header)
-
 set(DYNAMIX_SHARED_LIB ON CACHE BOOL "DynaMix shared")
 set(DYNAMIX_BUILD_UNIT_TESTS OFF CACHE BOOL "DynaMix no unit tests")
 set(DYNAMIX_BUILD_EXAMPLES OFF CACHE BOOL "DynaMix no examples")

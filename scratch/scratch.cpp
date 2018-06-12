@@ -6,8 +6,12 @@
 // https://opensource.org/licenses/MIT
 //
 #include <dynamix/dynamix.hpp>
+#include <iostream>
+
+using namespace std;
 
 int main()
 {
+    cout << "Test\n";
     return 0;
 }
