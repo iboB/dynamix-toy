@@ -6,6 +6,10 @@ add_executable(rpg
     GameObject.h
     dynamixc.h
     ID.h
+	Character.cpp
+	Character.h
+	HPMessages.cpp
+	HPMessages.h
 )
 
 target_link_libraries(rpg dynamix)

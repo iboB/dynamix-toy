@@ -17,6 +17,9 @@ set(DYNAMIX_BUILD_EXAMPLES OFF CACHE BOOL "DynaMix no examples")
 set(DYNAMIX_BUILD_SCRATCH OFF CACHE BOOL "DynaMix no scratch")
 set(DYNAMIX_BUILD_TUTORIALS OFF CACHE BOOL "DynaMix no tutorials")
 set(DYNAMIX_BUILD_PERF OFF CACHE BOOL "DynaMix no perf")
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}) # so executables are next to the dll
+
 add_subdirectory(dynamix)
 
 add_subdirectory(rpg)

@@ -7,8 +7,6 @@
 //
 #pragma once
 
-#include <dynamix/dynamix.hpp>
-#include <dynamix/gen/short_message_macros.hpp>
+#include "dynamixc.h"
 
-#define MIXIN DYNAMIX_DECLARE_MIXIN
-#define DEF_MIXIN DYNAMIX_DEFINE_MIXIN
+MIXIN(Character)
