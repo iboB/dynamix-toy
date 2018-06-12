@@ -108,14 +108,15 @@ macro(add_precompiled_header TARGET_NAME PRECOMPILED_HEADER PRECOMPILED_SOURCE)
         # Add a custom target for building the precompiled header.
         # HACK: Add explicit -std=${CXX_STD} to work around an ugly issue for CMake 3.2+
         # which prevents us from actually scraping the -std=??? flag set by target_compile_features
-        if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-	    set(CXX_STD c++11)
-        else()
+        #if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+        #    set(CXX_STD c++11)
+        #else()
             set(CXX_STD gnu++11)
-        endif()
+        #endif()
+        get_filename_component(PRECOMPILED_HEADER_PATH ${PRECOMPILED_HEADER} ABSOLUTE)
         add_custom_command(
             OUTPUT ${OUTPUT_NAME}
-            COMMAND ${CMAKE_CXX_COMPILER} @${PCH_FLAGS_FILE} ${COMPILER_FLAGS} -x c++-header -std=${CXX_STD} -o ${OUTPUT_NAME} ${PRECOMPILED_HEADER}
+            COMMAND ${CMAKE_CXX_COMPILER} @${PCH_FLAGS_FILE} ${COMPILER_FLAGS} -x c++-header -std=${CXX_STD} -o ${OUTPUT_NAME} ${PRECOMPILED_HEADER_PATH}
             DEPENDS ${PRECOMPILED_HEADER})
         add_custom_target(${TARGET_NAME}_gch DEPENDS ${OUTPUT_NAME})
         add_dependencies(${TARGET_NAME} ${TARGET_NAME}_gch)
