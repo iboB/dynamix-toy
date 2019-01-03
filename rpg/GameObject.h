@@ -28,14 +28,13 @@ public:
 
     ID id() const { return m_id; }
 
-#if !defined(RETAIL)
-    const std::string& name() const { return m_name; }
-#endif
-
 private:
     ID m_id = Invalid_ID;
 
 #if !defined(RETAIL)
+public:
+    const std::string& name() const { return m_name; }
+private:
     std::string m_name;
 #endif
 

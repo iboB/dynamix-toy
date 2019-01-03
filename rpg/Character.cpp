@@ -6,4 +6,4 @@ public:
 
 };
 
-DEF_MIXIN(Character, );
+DEF_MIXIN(Character, dynamix::none);

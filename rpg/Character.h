@@ -9,4 +9,4 @@
 
 #include "dynamixc.h"
 
-MIXIN(Character)
+MIXIN(Character);
